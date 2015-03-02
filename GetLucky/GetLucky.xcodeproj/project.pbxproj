@@ -18,6 +18,10 @@
 		0F4947901AA472F100C65653 /* GLLottoBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F49478E1AA472F100C65653 /* GLLottoBallView.m */; };
 		0F4947931AA4730C00C65653 /* GLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947921AA4730C00C65653 /* GLBaseViewController.m */; };
 		0F4947941AA4730C00C65653 /* GLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947921AA4730C00C65653 /* GLBaseViewController.m */; };
+		0F4947A11AA4B77500C65653 /* GLAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947A01AA4B77500C65653 /* GLAboutViewController.m */; };
+		0F4947A21AA4B77500C65653 /* GLAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947A01AA4B77500C65653 /* GLAboutViewController.m */; };
+		0F4947A51AA4C4C800C65653 /* GLSlidingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947A41AA4C4C800C65653 /* GLSlidingLabel.m */; };
+		0F4947A61AA4C4C800C65653 /* GLSlidingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947A41AA4C4C800C65653 /* GLSlidingLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		0F49478E1AA472F100C65653 /* GLLottoBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLottoBallView.m; sourceTree = "<group>"; };
 		0F4947911AA4730C00C65653 /* GLBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBaseViewController.h; sourceTree = "<group>"; };
 		0F4947921AA4730C00C65653 /* GLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBaseViewController.m; sourceTree = "<group>"; };
+		0F49479F1AA4B77500C65653 /* GLAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLAboutViewController.h; sourceTree = "<group>"; };
+		0F4947A01AA4B77500C65653 /* GLAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLAboutViewController.m; sourceTree = "<group>"; };
+		0F4947A31AA4C4C800C65653 /* GLSlidingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSlidingLabel.h; sourceTree = "<group>"; };
+		0F4947A41AA4C4C800C65653 /* GLSlidingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSlidingLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,8 @@
 				0F49476D1AA4718D00C65653 /* GLMainViewController.m */,
 				0F4947911AA4730C00C65653 /* GLBaseViewController.h */,
 				0F4947921AA4730C00C65653 /* GLBaseViewController.m */,
+				0F49479F1AA4B77500C65653 /* GLAboutViewController.h */,
+				0F4947A01AA4B77500C65653 /* GLAboutViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +153,8 @@
 			children = (
 				0F49478D1AA472F100C65653 /* GLLottoBallView.h */,
 				0F49478E1AA472F100C65653 /* GLLottoBallView.m */,
+				0F4947A31AA4C4C800C65653 /* GLSlidingLabel.h */,
+				0F4947A41AA4C4C800C65653 /* GLSlidingLabel.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -248,7 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F49476E1AA4718D00C65653 /* GLMainViewController.m in Sources */,
+				0F4947A11AA4B77500C65653 /* GLAboutViewController.m in Sources */,
 				0F49476B1AA4718D00C65653 /* AppDelegate.m in Sources */,
+				0F4947A51AA4C4C800C65653 /* GLSlidingLabel.m in Sources */,
 				0F4947681AA4718D00C65653 /* main.m in Sources */,
 				0F4947931AA4730C00C65653 /* GLBaseViewController.m in Sources */,
 				0F49478F1AA472F100C65653 /* GLLottoBallView.m in Sources */,
@@ -259,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4947A61AA4C4C800C65653 /* GLSlidingLabel.m in Sources */,
 				0F4947941AA4730C00C65653 /* GLBaseViewController.m in Sources */,
 				0F4947821AA4718D00C65653 /* GetLuckyTests.m in Sources */,
 				0F4947901AA472F100C65653 /* GLLottoBallView.m in Sources */,
+				0F4947A21AA4B77500C65653 /* GLAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

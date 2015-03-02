@@ -16,6 +16,7 @@
 
 #import "GLMainViewController.h"
 #import "GLLottoBallView.h"
+#import "GLSlidingLabel.h"
 
 static const NSUInteger upperBound = 40; //upper bound for random numbers
 static const NSUInteger numberOfBalls = 5;
@@ -26,6 +27,7 @@ static const double shufflingAnimationDuration = 1.4;
 @property (weak, nonatomic) IBOutlet UIView *longPressView;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (nonatomic, strong) GLSlidingLabel *slidingInfoLabel;
 @property (nonatomic) BOOL isShufflingDone; //to disable long press view until shuffling animation is finished
 @end
 
@@ -33,9 +35,30 @@ static const double shufflingAnimationDuration = 1.4;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeHandling:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:swipeGesture];
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];
     [self.longPressView addGestureRecognizer:longPressGesture];
     self.isShufflingDone = YES;
+
+    NSMutableAttributedString *slidingInfoString = [[NSMutableAttributedString alloc] initWithString:@"Swipe upwards to know that incredibly cool guy who made this app" attributes:@{NSForegroundColorAttributeName: [UIColor redColor]}];
+    self.slidingInfoLabel = [[GLSlidingLabel alloc] initWithAttributedText:slidingInfoString];
+    [self.slidingInfoLabel setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [self.view addSubview:self.slidingInfoLabel];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.slidingInfoLabel startAnimatingWithDuration:15.f];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    CGFloat height = self.resultLabel.frame.origin.y + 15.f;
+    CGFloat labelHeight = self.slidingInfoLabel.bounds.size.height;
+    CGRect frame = CGRectMake(0.f, height-labelHeight, self.view.bounds.size.width, labelHeight);
+    [self.slidingInfoLabel setFrame:frame];
 }
 
 - (void)randomiseLottoBalls {
@@ -57,6 +80,13 @@ static const double shufflingAnimationDuration = 1.4;
         else {
             [lottoBallView setNumber:(arc4random_uniform(upperBound)+1) animationDuration:animDuration withCompletionHandler:nil];
         }
+    }
+}
+
+- (void)swipeHandling:(UISwipeGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateRecognized) {
+        UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"aboutViewController"];
+        [self presentViewController:controller animated:YES completion:nil];
     }
 }
 

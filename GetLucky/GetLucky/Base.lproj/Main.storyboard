@@ -119,5 +119,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="oPt-Bb-vT5">
+            <objects>
+                <viewController storyboardIdentifier="aboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXe-fd-xlg" customClass="GLAboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pVS-Fp-QLg"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWb-3q-iOe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bi2-ul-rls">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-Og-WGC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf1-ry-pVx">
+                                <rect key="frame" x="0.0" y="230" width="600" height="140"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="qEu-rq-kwk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hAK-Og-WGC" firstAttribute="leading" secondItem="bi2-ul-rls" secondAttribute="leading" id="2gd-mO-mx3"/>
+                            <constraint firstAttribute="trailing" secondItem="hAK-Og-WGC" secondAttribute="trailing" id="8HE-QK-hIN"/>
+                            <constraint firstItem="iWb-3q-iOe" firstAttribute="top" secondItem="hAK-Og-WGC" secondAttribute="bottom" id="HdK-6R-tcI"/>
+                            <constraint firstItem="Tf1-ry-pVx" firstAttribute="centerX" secondItem="hAK-Og-WGC" secondAttribute="centerX" id="IvX-yW-4rN"/>
+                            <constraint firstItem="Tf1-ry-pVx" firstAttribute="width" secondItem="bi2-ul-rls" secondAttribute="width" id="rzk-UW-4ri"/>
+                            <constraint firstItem="Tf1-ry-pVx" firstAttribute="centerY" secondItem="hAK-Og-WGC" secondAttribute="centerY" id="ux1-bo-sxj"/>
+                            <constraint firstItem="hAK-Og-WGC" firstAttribute="top" secondItem="bi2-ul-rls" secondAttribute="top" id="yTl-wf-mfw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fullScreenImageView" destination="hAK-Og-WGC" id="UrP-wG-Ack"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99a-Ce-R8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="136"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="flag" width="800" height="576"/>
+    </resources>
 </document>
