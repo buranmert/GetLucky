@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		0F4947681AA4718D00C65653 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947671AA4718D00C65653 /* main.m */; };
 		0F49476B1AA4718D00C65653 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F49476A1AA4718D00C65653 /* AppDelegate.m */; };
-		0F49476E1AA4718D00C65653 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F49476D1AA4718D00C65653 /* ViewController.m */; };
+		0F49476E1AA4718D00C65653 /* GLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F49476D1AA4718D00C65653 /* GLMainViewController.m */; };
 		0F4947711AA4718D00C65653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F49476F1AA4718D00C65653 /* Main.storyboard */; };
 		0F4947731AA4718D00C65653 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4947721AA4718D00C65653 /* Images.xcassets */; };
 		0F4947761AA4718D00C65653 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4947741AA4718D00C65653 /* LaunchScreen.xib */; };
 		0F4947821AA4718D00C65653 /* GetLuckyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947811AA4718D00C65653 /* GetLuckyTests.m */; };
+		0F49478F1AA472F100C65653 /* GLLottoBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F49478E1AA472F100C65653 /* GLLottoBallView.m */; };
+		0F4947901AA472F100C65653 /* GLLottoBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F49478E1AA472F100C65653 /* GLLottoBallView.m */; };
+		0F4947931AA4730C00C65653 /* GLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947921AA4730C00C65653 /* GLBaseViewController.m */; };
+		0F4947941AA4730C00C65653 /* GLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4947921AA4730C00C65653 /* GLBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +36,18 @@
 		0F4947671AA4718D00C65653 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0F4947691AA4718D00C65653 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0F49476A1AA4718D00C65653 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0F49476C1AA4718D00C65653 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0F49476D1AA4718D00C65653 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0F49476C1AA4718D00C65653 /* GLMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLMainViewController.h; sourceTree = "<group>"; };
+		0F49476D1AA4718D00C65653 /* GLMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLMainViewController.m; sourceTree = "<group>"; };
 		0F4947701AA4718D00C65653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F4947721AA4718D00C65653 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0F4947751AA4718D00C65653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0F49477B1AA4718D00C65653 /* GetLuckyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetLuckyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4947801AA4718D00C65653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4947811AA4718D00C65653 /* GetLuckyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetLuckyTests.m; sourceTree = "<group>"; };
+		0F49478D1AA472F100C65653 /* GLLottoBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLLottoBallView.h; sourceTree = "<group>"; };
+		0F49478E1AA472F100C65653 /* GLLottoBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLottoBallView.m; sourceTree = "<group>"; };
+		0F4947911AA4730C00C65653 /* GLBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBaseViewController.h; sourceTree = "<group>"; };
+		0F4947921AA4730C00C65653 /* GLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +89,10 @@
 		0F4947641AA4718D00C65653 /* GetLucky */ = {
 			isa = PBXGroup;
 			children = (
+				0F49478C1AA4725700C65653 /* Views */,
+				0F49478B1AA4725000C65653 /* Controllers */,
 				0F4947691AA4718D00C65653 /* AppDelegate.h */,
 				0F49476A1AA4718D00C65653 /* AppDelegate.m */,
-				0F49476C1AA4718D00C65653 /* ViewController.h */,
-				0F49476D1AA4718D00C65653 /* ViewController.m */,
 				0F49476F1AA4718D00C65653 /* Main.storyboard */,
 				0F4947721AA4718D00C65653 /* Images.xcassets */,
 				0F4947741AA4718D00C65653 /* LaunchScreen.xib */,
@@ -117,6 +125,26 @@
 				0F4947801AA4718D00C65653 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F49478B1AA4725000C65653 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F49476C1AA4718D00C65653 /* GLMainViewController.h */,
+				0F49476D1AA4718D00C65653 /* GLMainViewController.m */,
+				0F4947911AA4730C00C65653 /* GLBaseViewController.h */,
+				0F4947921AA4730C00C65653 /* GLBaseViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0F49478C1AA4725700C65653 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F49478D1AA472F100C65653 /* GLLottoBallView.h */,
+				0F49478E1AA472F100C65653 /* GLLottoBallView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F49476E1AA4718D00C65653 /* ViewController.m in Sources */,
+				0F49476E1AA4718D00C65653 /* GLMainViewController.m in Sources */,
 				0F49476B1AA4718D00C65653 /* AppDelegate.m in Sources */,
 				0F4947681AA4718D00C65653 /* main.m in Sources */,
+				0F4947931AA4730C00C65653 /* GLBaseViewController.m in Sources */,
+				0F49478F1AA472F100C65653 /* GLLottoBallView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4947941AA4730C00C65653 /* GLBaseViewController.m in Sources */,
 				0F4947821AA4718D00C65653 /* GetLuckyTests.m in Sources */,
+				0F4947901AA472F100C65653 /* GLLottoBallView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
