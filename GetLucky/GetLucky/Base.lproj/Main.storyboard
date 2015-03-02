@@ -131,26 +131,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-Og-WGC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-Og-WGC">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf1-ry-pVx">
-                                <rect key="frame" x="0.0" y="230" width="600" height="140"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="qEu-rq-kwk"/>
-                                </constraints>
-                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hAK-Og-WGC" firstAttribute="leading" secondItem="bi2-ul-rls" secondAttribute="leading" id="2gd-mO-mx3"/>
                             <constraint firstAttribute="trailing" secondItem="hAK-Og-WGC" secondAttribute="trailing" id="8HE-QK-hIN"/>
                             <constraint firstItem="iWb-3q-iOe" firstAttribute="top" secondItem="hAK-Og-WGC" secondAttribute="bottom" id="HdK-6R-tcI"/>
-                            <constraint firstItem="Tf1-ry-pVx" firstAttribute="centerX" secondItem="hAK-Og-WGC" secondAttribute="centerX" id="IvX-yW-4rN"/>
-                            <constraint firstItem="Tf1-ry-pVx" firstAttribute="width" secondItem="bi2-ul-rls" secondAttribute="width" id="rzk-UW-4ri"/>
-                            <constraint firstItem="Tf1-ry-pVx" firstAttribute="centerY" secondItem="hAK-Og-WGC" secondAttribute="centerY" id="ux1-bo-sxj"/>
                             <constraint firstItem="hAK-Og-WGC" firstAttribute="top" secondItem="bi2-ul-rls" secondAttribute="top" id="yTl-wf-mfw"/>
                         </constraints>
                     </view>

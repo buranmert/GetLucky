@@ -8,6 +8,8 @@
 
 #import "GLAboutViewController.h"
 
+static const CGFloat fixedMaskTextHeight = 100.f;
+
 @interface GLAboutViewController()
 @property (weak, nonatomic) IBOutlet UIImageView *fullScreenImageView;
 @property (nonatomic, strong) CATextLayer *textMaskLayer;
@@ -21,12 +23,11 @@
     swipeGesture.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeGesture];
     
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    [self.view addGestureRecognizer:tapGesture];
+    
     CATextLayer *textLayer = [[CATextLayer alloc] init];
     textLayer.string = @"Mert Buran";
-    CGRect frame = CGRectZero;
-    frame.origin = CGPointMake((self.fullScreenImageView.bounds.size.width - textLayer.bounds.size.width)/2.f, (self.fullScreenImageView.bounds.size.height - textLayer.bounds.size.height)/2.f);
-    frame.size = self.fullScreenImageView.bounds.size;
-    textLayer.frame = frame;
     textLayer.foregroundColor = [UIColor blackColor].CGColor;
     textLayer.fontSize = 55.f;
     textLayer.contentsScale = [[UIScreen mainScreen] scale];
@@ -41,16 +42,24 @@
     }
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    [self maskImageView];
+- (void)tapped:(UITapGestureRecognizer *)recognizer {
+    CGPoint tapLocation = [recognizer locationInView:self.view];
+    tapLocation.x -= 10.f;
+    tapLocation.y -= 10.f;
+    self.textMaskLayer.alignmentMode = kCAAlignmentLeft;
+    CGRect frame = self.textMaskLayer.frame;
+    frame.origin = tapLocation;
+    self.textMaskLayer.frame = frame;
 }
 
-- (void)maskImageView {
-        CGRect frame = CGRectZero;
-        frame.origin = CGPointMake((self.fullScreenImageView.bounds.size.width - self.textMaskLayer.bounds.size.width)/2.f, (self.fullScreenImageView.bounds.size.height - self.textMaskLayer.bounds.size.height)/2.f);
-        frame.size = self.fullScreenImageView.bounds.size;
-        self.textMaskLayer.frame = frame;
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self centralizeMaskLayer];
+}
+
+- (void)centralizeMaskLayer {
+    CGRect frame = CGRectMake(0.f, (self.fullScreenImageView.bounds.size.height-fixedMaskTextHeight)/2.f , self.fullScreenImageView.bounds.size.width, self.fullScreenImageView.bounds.size.height);
+    self.textMaskLayer.frame = frame;
 }
 
 @end
