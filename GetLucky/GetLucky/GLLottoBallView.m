@@ -11,7 +11,7 @@
 static const CGFloat fixedDiameter = 65.f;
 
 @interface GLLottoBallView ()
-@property (nonatomic, strong) UIView *circleView;
+@property (nonatomic, strong) UIView *circleView; //to achieve that animation, there must be two seperate views. only 1 label was not enough
 @property (nonatomic, strong) UILabel *numberLabel;
 @end
 
@@ -43,6 +43,8 @@ static const CGFloat fixedDiameter = 65.f;
 }
 
 - (void)layoutSubviews {
+    //autolayout is cool but sometimes it can be a pain-in-the-ass. it is just an overkill when you need to center a subview that is added programatically
+    //therefore i chose to override -layoutSubviews method to make sure subviews are always centered
     [super layoutSubviews];
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
@@ -52,26 +54,16 @@ static const CGFloat fixedDiameter = 65.f;
     [self.numberLabel setFrame:centralizedFrame];
 }
 
-- (CGFloat)maxDiameter {
-    return MIN(MIN(self.bounds.size.height, self.bounds.size.width), fixedDiameter);
-}
-
-+ (UIColor *)normalTextColor {
-    return [UIColor whiteColor];
-}
-
-+ (UIColor *)inAnimationTextColor {
-    return [UIColor redColor];
-}
-
 - (void)setNumber:(NSUInteger)newNumber animationDuration:(double)animDuration withCompletionHandler:(void (^)(void))completion {
     __weak typeof(self) weakSelf = self;
     self.numberLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)newNumber];
     [self.numberLabel setTextColor:[GLLottoBallView inAnimationTextColor]];
     [self.numberLabel.layer setZPosition:[self maxDiameter]];
     
+    //circle view rotates
     CATransform3D firstCircleTransform = CATransform3DMakeRotation(M_PI, 0.f, 0.5f, 0.f);
     CATransform3D lastCircleTransform = CATransform3DMakeRotation(0.f, 0.f, 0.5f, 0.f);
+    //number shrinks and then enlarges again
     CATransform3D firstNumberTransform = CATransform3DMakeScale(0.25f, 0.25f, 0.25f);
     CATransform3D lastNumberTransform = CATransform3DMakeScale(1.f, 1.f, 1.f);
     
@@ -97,6 +89,20 @@ static const CGFloat fixedDiameter = 65.f;
                                               }
                                           }];
                      }];
+}
+
+#pragma mark - Constants
+
+- (CGFloat)maxDiameter {
+    return MIN(MIN(self.bounds.size.height, self.bounds.size.width), fixedDiameter);
+}
+
++ (UIColor *)normalTextColor {
+    return [UIColor whiteColor];
+}
+
++ (UIColor *)inAnimationTextColor {
+    return [UIColor redColor];
 }
 
 @end
